@@ -6,7 +6,7 @@ from detectron2.checkpoint import DetectionCheckpointer
 from defrcn.config import get_cfg, set_global_cfg
 from defrcn.evaluation import DatasetEvaluators, verify_results
 from defrcn.engine import DefaultTrainer, default_argument_parser, default_setup
-
+os.environ["PYTORCH_NO_FOREACH"] = "1"
 
 class Trainer(DefaultTrainer):
 

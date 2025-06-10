@@ -187,7 +187,7 @@ def register_all_lvis(root="datasets"):
 
 
 # ==== Predefined splits for PASCAL VOC ===========
-def register_all_pascal_voc(root="datasets"):
+def register_all_voc(root="datasets"):
     # SPLITS = [
     #     ("voc_2007_trainval", "VOC2007", "trainval"),
     #     ("voc_2007_train", "VOC2007", "train"),
@@ -453,5 +453,5 @@ def register_all_coco_taco(root="datasets"):
 # Register them all under "./datasets"
 register_all_coco()
 register_all_lvis()
-register_all_pascal_voc()
+register_all_voc()
 register_all_coco_taco()

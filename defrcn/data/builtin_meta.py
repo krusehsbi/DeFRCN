@@ -1,3 +1,4 @@
+# All coco categories, together with their nice-looking visualization colors
 # It's from https://github.com/cocodataset/panopticapi/blob/master/panoptic_coco_categories.json
 COCO_CATEGORIES = [
     {"color": [220, 20, 60], "isthing": 1, "id": 1, "name": "person"},
@@ -12,7 +13,12 @@ COCO_CATEGORIES = [
     {"color": [250, 170, 30], "isthing": 1, "id": 10, "name": "traffic light"},
     {"color": [100, 170, 30], "isthing": 1, "id": 11, "name": "fire hydrant"},
     {"color": [220, 220, 0], "isthing": 1, "id": 13, "name": "stop sign"},
-    {"color": [175, 116, 175], "isthing": 1, "id": 14, "name": "parking meter",},
+    {
+        "color": [175, 116, 175],
+        "isthing": 1,
+        "id": 14,
+        "name": "parking meter",
+    },
     {"color": [250, 0, 30], "isthing": 1, "id": 15, "name": "bench"},
     {"color": [165, 42, 42], "isthing": 1, "id": 16, "name": "bird"},
     {"color": [255, 77, 255], "isthing": 1, "id": 17, "name": "cat"},
@@ -38,7 +44,12 @@ COCO_CATEGORIES = [
     {"color": [45, 89, 255], "isthing": 1, "id": 40, "name": "baseball glove"},
     {"color": [134, 134, 103], "isthing": 1, "id": 41, "name": "skateboard"},
     {"color": [145, 148, 174], "isthing": 1, "id": 42, "name": "surfboard"},
-    {"color": [255, 208, 186], "isthing": 1, "id": 43, "name": "tennis racket",},
+    {
+        "color": [255, 208, 186],
+        "isthing": 1,
+        "id": 43,
+        "name": "tennis racket",
+    },
     {"color": [197, 226, 255], "isthing": 1, "id": 44, "name": "bottle"},
     {"color": [171, 134, 1], "isthing": 1, "id": 46, "name": "wine glass"},
     {"color": [109, 63, 54], "isthing": 1, "id": 47, "name": "cup"},
@@ -97,7 +108,12 @@ COCO_CATEGORIES = [
     {"color": [193, 0, 92], "isthing": 0, "id": 138, "name": "net"},
     {"color": [76, 91, 113], "isthing": 0, "id": 141, "name": "pillow"},
     {"color": [255, 180, 195], "isthing": 0, "id": 144, "name": "platform"},
-    {"color": [106, 154, 176], "isthing": 0, "id": 145, "name": "playingfield"},
+    {
+        "color": [106, 154, 176],
+        "isthing": 0,
+        "id": 145,
+        "name": "playingfield",
+    },
     {"color": [230, 150, 140], "isthing": 0, "id": 147, "name": "railroad"},
     {"color": [60, 143, 255], "isthing": 0, "id": 148, "name": "river"},
     {"color": [128, 64, 128], "isthing": 0, "id": 149, "name": "road"},
@@ -114,24 +130,94 @@ COCO_CATEGORIES = [
     {"color": [7, 246, 231], "isthing": 0, "id": 176, "name": "wall-tile"},
     {"color": [107, 255, 200], "isthing": 0, "id": 177, "name": "wall-wood"},
     {"color": [58, 41, 149], "isthing": 0, "id": 178, "name": "water-other"},
-    {"color": [183, 121, 142], "isthing": 0, "id": 180, "name": "window-blind"},
+    {
+        "color": [183, 121, 142],
+        "isthing": 0,
+        "id": 180,
+        "name": "window-blind",
+    },
     {"color": [255, 73, 97], "isthing": 0, "id": 181, "name": "window-other"},
     {"color": [107, 142, 35], "isthing": 0, "id": 184, "name": "tree-merged"},
-    {"color": [190, 153, 153], "isthing": 0, "id": 185, "name": "fence-merged"},
-    {"color": [146, 139, 141], "isthing": 0, "id": 186, "name": "ceiling-merged"},
-    {"color": [70, 130, 180], "isthing": 0, "id": 187, "name": "sky-other-merged"},
-    {"color": [134, 199, 156], "isthing": 0, "id": 188, "name": "cabinet-merged"},
-    {"color": [209, 226, 140], "isthing": 0, "id": 189, "name": "table-merged"},
-    {"color": [96, 36, 108], "isthing": 0, "id": 190, "name": "floor-other-merged"},
-    {"color": [96, 96, 96], "isthing": 0, "id": 191, "name": "pavement-merged"},
-    {"color": [64, 170, 64], "isthing": 0, "id": 192, "name": "mountain-merged"},
-    {"color": [152, 251, 152], "isthing": 0, "id": 193, "name": "grass-merged"},
+    {
+        "color": [190, 153, 153],
+        "isthing": 0,
+        "id": 185,
+        "name": "fence-merged",
+    },
+    {
+        "color": [146, 139, 141],
+        "isthing": 0,
+        "id": 186,
+        "name": "ceiling-merged",
+    },
+    {
+        "color": [70, 130, 180],
+        "isthing": 0,
+        "id": 187,
+        "name": "sky-other-merged",
+    },
+    {
+        "color": [134, 199, 156],
+        "isthing": 0,
+        "id": 188,
+        "name": "cabinet-merged",
+    },
+    {
+        "color": [209, 226, 140],
+        "isthing": 0,
+        "id": 189,
+        "name": "table-merged",
+    },
+    {
+        "color": [96, 36, 108],
+        "isthing": 0,
+        "id": 190,
+        "name": "floor-other-merged",
+    },
+    {
+        "color": [96, 96, 96],
+        "isthing": 0,
+        "id": 191,
+        "name": "pavement-merged",
+    },
+    {
+        "color": [64, 170, 64],
+        "isthing": 0,
+        "id": 192,
+        "name": "mountain-merged",
+    },
+    {
+        "color": [152, 251, 152],
+        "isthing": 0,
+        "id": 193,
+        "name": "grass-merged",
+    },
     {"color": [208, 229, 228], "isthing": 0, "id": 194, "name": "dirt-merged"},
-    {"color": [206, 186, 171], "isthing": 0, "id": 195, "name": "paper-merged"},
-    {"color": [152, 161, 64], "isthing": 0, "id": 196, "name": "food-other-merged"},
-    {"color": [116, 112, 0], "isthing": 0, "id": 197, "name": "building-other-merged"},
+    {
+        "color": [206, 186, 171],
+        "isthing": 0,
+        "id": 195,
+        "name": "paper-merged",
+    },
+    {
+        "color": [152, 161, 64],
+        "isthing": 0,
+        "id": 196,
+        "name": "food-other-merged",
+    },
+    {
+        "color": [116, 112, 0],
+        "isthing": 0,
+        "id": 197,
+        "name": "building-other-merged",
+    },
     {"color": [0, 114, 143], "isthing": 0, "id": 198, "name": "rock-merged"},
-    {"color": [102, 102, 156], "isthing": 0, "id": 199, "name": "wall-other-merged"},
+    {
+        "color": [102, 102, 156],
+        "isthing": 0,
+        "id": 199,
+        "name": "wall-other-merged",
+    },
     {"color": [250, 141, 255], "isthing": 0, "id": 200, "name": "rug-merged"},
 ]
 
@@ -161,20 +247,71 @@ COCO_NOVEL_CATEGORIES = [
 
 # PASCAL VOC categories
 PASCAL_VOC_ALL_CATEGORIES = {
-    1: ["aeroplane", "bicycle", "boat", "bottle", "car",
-        "cat", "chair", "diningtable", "dog", "horse",
-        "person", "pottedplant", "sheep", "train", "tvmonitor",
-        "bird", "bus", "cow", "motorbike", "sofa",
+    1: [
+        "aeroplane",
+        "bicycle",
+        "boat",
+        "bottle",
+        "car",
+        "cat",
+        "chair",
+        "diningtable",
+        "dog",
+        "horse",
+        "person",
+        "pottedplant",
+        "sheep",
+        "train",
+        "tvmonitor",
+        "bird",
+        "bus",
+        "cow",
+        "motorbike",
+        "sofa",
     ],
-    2: ["bicycle", "bird", "boat", "bus", "car",
-        "cat", "chair", "diningtable", "dog", "motorbike",
-        "person", "pottedplant", "sheep", "train", "tvmonitor",
-        "aeroplane", "bottle", "cow", "horse", "sofa",
+    2: [
+        "bicycle",
+        "bird",
+        "boat",
+        "bus",
+        "car",
+        "cat",
+        "chair",
+        "diningtable",
+        "dog",
+        "motorbike",
+        "person",
+        "pottedplant",
+        "sheep",
+        "train",
+        "tvmonitor",
+        "aeroplane",
+        "bottle",
+        "cow",
+        "horse",
+        "sofa",
     ],
-    3: ["aeroplane", "bicycle", "bird", "bottle", "bus",
-        "car", "chair", "cow", "diningtable", "dog",
-        "horse", "person", "pottedplant", "train", "tvmonitor",
-        "boat", "cat", "motorbike", "sheep", "sofa",
+    3: [
+        "aeroplane",
+        "bicycle",
+        "bird",
+        "bottle",
+        "bus",
+        "car",
+        "chair",
+        "cow",
+        "diningtable",
+        "dog",
+        "horse",
+        "person",
+        "pottedplant",
+        "train",
+        "tvmonitor",
+        "boat",
+        "cat",
+        "motorbike",
+        "sheep",
+        "sofa",
     ],
 }
 
@@ -185,20 +322,105 @@ PASCAL_VOC_NOVEL_CATEGORIES = {
 }
 
 PASCAL_VOC_BASE_CATEGORIES = {
-    1: ["aeroplane", "bicycle", "boat", "bottle", "car",
-        "cat", "chair", "diningtable", "dog", "horse",
-        "person", "pottedplant", "sheep", "train", "tvmonitor",
+    1: [
+        "aeroplane",
+        "bicycle",
+        "boat",
+        "bottle",
+        "car",
+        "cat",
+        "chair",
+        "diningtable",
+        "dog",
+        "horse",
+        "person",
+        "pottedplant",
+        "sheep",
+        "train",
+        "tvmonitor",
     ],
-    2: ["bicycle", "bird", "boat", "bus", "car",
-        "cat", "chair", "diningtable", "dog", "motorbike",
-        "person", "pottedplant", "sheep", "train", "tvmonitor",
+    2: [
+        "bicycle",
+        "bird",
+        "boat",
+        "bus",
+        "car",
+        "cat",
+        "chair",
+        "diningtable",
+        "dog",
+        "motorbike",
+        "person",
+        "pottedplant",
+        "sheep",
+        "train",
+        "tvmonitor",
     ],
-    3: ["aeroplane", "bicycle", "bird", "bottle", "bus",
-        "car", "chair", "cow", "diningtable", "dog",
-        "horse", "person", "pottedplant", "train", "tvmonitor",
+    3: [
+        "aeroplane",
+        "bicycle",
+        "bird",
+        "bottle",
+        "bus",
+        "car",
+        "chair",
+        "cow",
+        "diningtable",
+        "dog",
+        "horse",
+        "person",
+        "pottedplant",
+        "train",
+        "tvmonitor",
     ],
 }
 
+TACO_CATEGORIES = [
+  {"id": 1, "name": "Aluminium foil", "category": "Aluminium foil", "color": [255, 0, 0]},
+  {"id": 2, "name": "Bottle", "category": "Bottle", "color": [0, 255, 0]},
+  {"id": 3, "name": "Bottle cap", "category": "Bottle cap", "color": [0, 0, 255]},
+  {"id": 4, "name": "Broken glass", "category": "Broken glass", "color": [255, 255, 0]},
+  {"id": 5, "name": "Can", "category": "Can", "color": [255, 0, 255]},
+  {"id": 6, "name": "Carton", "category": "Carton", "color": [0, 255, 255]},
+  {"id": 7, "name": "Cigarette", "category": "Cigarette", "color": [128, 0, 0]},
+  {"id": 8, "name": "Cup", "category": "Cup", "color": [0, 128, 0]},
+  {"id": 9, "name": "Lid", "category": "Lid", "color": [0, 0, 128]},
+  {"id": 10, "name": "Other plastic", "category": "Other plastic", "color": [128, 128, 0]},
+  {"id": 11, "name": "Paper", "category": "Paper", "color": [128, 0, 128]},
+  {"id": 12, "name": "Plastic bag & wrapper", "category": "Plastic bag & wrapper", "color": [0, 128, 128]},
+  {"id": 13, "name": "Plastic container", "category": "Plastic container", "color": [192, 192, 192]},
+  {"id": 14, "name": "Plastic utensils", "category": "Plastic utensils", "color": [255, 165, 0]},
+  {"id": 15, "name": "Pop tab", "category": "Pop tab", "color": [75, 0, 130]},
+  {"id": 16, "name": "Straw", "category": "Straw", "color": [255, 20, 147]},
+  {"id": 17, "name": "Styrofoam piece", "category": "Styrofoam piece", "color": [46, 139, 87]}
+]
+
+TACO_CATEGORIES_HIGHSHOT = [
+  {"id": 1, "name": "Aluminium foil", "category": "Aluminium foil", "color": [192, 192, 192]},
+  {"id": 2, "name": "Bottle", "category": "Bottle", "color": [0, 123, 255]},
+  {"id": 3, "name": "Bottle cap", "category": "Bottle cap", "color": [0, 102, 204]},
+  {"id": 4, "name": "Broken glass", "category": "Broken glass", "color": [173, 216, 230]},
+  {"id": 5, "name": "Can", "category": "Can", "color": [255, 99, 71]},
+  {"id": 6, "name": "Carton", "category": "Carton", "color": [255, 204, 153]},
+  {"id": 7, "name": "Cigarette", "category": "Cigarette", "color": [160, 82, 45]},
+  {"id": 8, "name": "Cup", "category": "Cup", "color": [255, 182, 193]},
+  {"id": 9, "name": "Lid", "category": "Lid", "color": [128, 0, 128]},
+  {"id": 10, "name": "Other plastic", "category": "Other plastic", "color": [255, 255, 0]},
+  {"id": 11, "name": "Paper", "category": "Paper", "color": [245, 245, 220]},
+  {"id": 12, "name": "Plastic bag & wrapper", "category": "Plastic bag & wrapper", "color": [0, 255, 255]},
+  {"id": 13, "name": "Plastic container", "category": "Plastic container", "color": [102, 255, 102]},
+  {"id": 14, "name": "Pop tab", "category": "Pop tab", "color": [105, 105, 105]},
+  {"id": 15, "name": "Straw", "category": "Straw", "color": [255, 20, 147]},
+  {"id": 16, "name": "Styrofoam piece", "category": "Styrofoam piece", "color": [176, 224, 230]}
+]
+
+TACO_CATEGORIES_HARD = [
+    {"id": 7, "name": "Cigarette", "category": "Cigarette", "color": [160, 82, 45]},
+    {"id": 4, "name": "Broken glass", "category": "Broken glass", "color": [173, 216, 230]},
+    {"id": 14, "name": "Pop tab", "category": "Pop tab", "color": [105, 105, 105]},
+]
+
+CIGBUTTS_CATEGORIES = [{"id": 1, "name": "litter", "category": "litter", "color": [160, 82, 45]}]
 
 def _get_coco_instances_meta():
     thing_ids = [k["id"] for k in COCO_CATEGORIES if k["isthing"] == 1]
@@ -223,19 +445,54 @@ def _get_coco_fewshot_instances_meta():
         k["name"] for k in COCO_NOVEL_CATEGORIES if k["isthing"] == 1
     ]
     base_categories = [
-        k for k in COCO_CATEGORIES if k["isthing"] == 1 and k["name"] not in novel_classes
+        k
+        for k in COCO_CATEGORIES
+        if k["isthing"] == 1 and k["name"] not in novel_classes
     ]
     base_ids = [k["id"] for k in base_categories]
     base_dataset_id_to_contiguous_id = {k: i for i, k in enumerate(base_ids)}
     base_classes = [k["name"] for k in base_categories]
-    ret["novel_dataset_id_to_contiguous_id"] = novel_dataset_id_to_contiguous_id
+    ret[
+        "novel_dataset_id_to_contiguous_id"
+    ] = novel_dataset_id_to_contiguous_id
     ret["novel_classes"] = novel_classes
     ret["base_dataset_id_to_contiguous_id"] = base_dataset_id_to_contiguous_id
     ret["base_classes"] = base_classes
     return ret
 
 
-def _get_voc_fewshot_instances_meta():
+def _get_lvis_instances_meta_v0_5():
+    from .lvis_v0_5_categories import LVIS_CATEGORIES
+
+    assert len(LVIS_CATEGORIES) == 1230
+    cat_ids = [k["id"] for k in LVIS_CATEGORIES]
+    assert min(cat_ids) == 1 and max(cat_ids) == len(
+        cat_ids
+    ), "Category ids are not in [1, #categories], as expected"
+    # Ensure that the category list is sorted by id
+    lvis_categories = [
+        k for k in sorted(LVIS_CATEGORIES, key=lambda x: x["id"])
+    ]
+    thing_classes = [k["synonyms"][0] for k in lvis_categories]
+    meta = {"thing_classes": thing_classes}
+    return meta
+
+
+def _get_lvis_fewshot_instances_meta_v0_5():
+    from .lvis_v0_5_categories import LVIS_CATEGORIES_NOVEL
+
+    all_cats = _get_lvis_instances_meta_v0_5()["thing_classes"]
+    lvis_categories_sub = [
+        k for k in sorted(LVIS_CATEGORIES_NOVEL, key=lambda x: x["id"])
+    ]
+    sub_cats = [k["synonyms"][0] for k in lvis_categories_sub]
+    mapping = {all_cats.index(c): i for i, c in enumerate(sub_cats)}
+    meta = {"thing_classes": sub_cats, "class_mapping": mapping}
+
+    return meta
+
+
+def _get_pascal_voc_fewshot_instances_meta():
     ret = {
         "thing_classes": PASCAL_VOC_ALL_CATEGORIES,
         "novel_classes": PASCAL_VOC_NOVEL_CATEGORIES,
@@ -243,12 +500,129 @@ def _get_voc_fewshot_instances_meta():
     }
     return ret
 
+def _get_coco_taco_metadata():
+    base_classes = [
+        "person", "bicycle", "car", "motorcycle", "airplane", "bus",
+        "train", "truck", "boat", "traffic light", "fire hydrant",
+        "stop sign", "parking meter", "bench", "bird", "cat", "dog",
+        "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe",
+        "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee",
+        "skis", "snowboard", "sports ball", "kite", "baseball bat",
+        "baseball glove", "skateboard", "surfboard", "tennis racket",
+        "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl",
+        "banana", "apple", "sandwich", "orange", "broccoli", "carrot",
+        "hot dog", "pizza", "donut", "cake", "chair", "couch", "potted plant",
+        "bed", "dining table", "toilet", "tv", "laptop", "mouse", "remote",
+        "keyboard", "cell phone", "microwave", "oven", "toaster", "sink",
+        "refrigerator", "book", "clock", "vase", "scissors", "teddy bear",
+        "hair drier", "toothbrush"
+    ]
+
+    novel_classes = [
+        'Aluminium foil', 'Battery', 'Aluminium blister pack', 'Carded blister pack',
+        'Other plastic bottle', 'Clear plastic bottle', 'Glass bottle',
+        'Plastic bottle cap', 'Metal bottle cap', 'Broken glass', 'Food Can',
+        'Aerosol', 'Drink can', 'Toilet tube', 'Other carton', 'Egg carton',
+        'Drink carton', 'Corrugated carton', 'Meal carton', 'Pizza box', 'Paper cup',
+        'Disposable plastic cup', 'Foam cup', 'Glass cup', 'Other plastic cup',
+        'Food waste', 'Glass jar', 'Plastic lid', 'Metal lid', 'Other plastic',
+        'Magazine paper', 'Tissues', 'Wrapping paper', 'Normal paper', 'Paper bag',
+        'Plastified paper bag', 'Plastic film', 'Six pack rings', 'Garbage bag',
+        'Other plastic wrapper', 'Single-use carrier bag', 'Polypropylene bag',
+        'Crisp packet', 'Spread tub', 'Tupperware', 'Disposable food container',
+        'Foam food container', 'Other plastic container', 'Plastic glooves',
+        'Plastic utensils', 'Pop tab', 'Rope & strings', 'Scrap metal', 'Shoe',
+        'Squeezable tube', 'Plastic straw', 'Paper straw', 'Styrofoam piece',
+        'Unlabeled litter', 'Cigarette'
+    ]
+
+    thing_classes = base_classes
+    thing_dataset_id_to_contiguous_id = {i + 1: i for i in range(len(thing_classes))}
+
+    return {
+        "thing_classes": thing_classes,
+        "base_classes": base_classes,
+        "novel_classes": novel_classes,
+        "thing_dataset_id_to_contiguous_id": thing_dataset_id_to_contiguous_id,
+    }
+
+
+def _get_coco_taco_metadata_fewshot():
+    thing_ids = [k["id"] for k in TACO_CATEGORIES]
+    thing_colors = [k["color"] for k in TACO_CATEGORIES]
+    assert len(thing_ids) == 17, len(thing_ids)
+    # Mapping from the incontiguous TACO category id to an id in [0, 17]
+    thing_dataset_id_to_contiguous_id = {k: i for i, k in enumerate(thing_ids)}
+    thing_classes = [k["name"] for k in TACO_CATEGORIES]
+    ret = {
+        "thing_dataset_id_to_contiguous_id": thing_dataset_id_to_contiguous_id,
+        "thing_classes": thing_classes,
+        "thing_colors": thing_colors,
+    }
+    return ret
+
+def _get_coco_taco_metadata_highshot():
+    thing_ids = [k["id"] for k in TACO_CATEGORIES_HIGHSHOT]
+    thing_colors = [k["color"] for k in TACO_CATEGORIES_HIGHSHOT]
+    assert len(thing_ids) == 16, len(thing_ids)
+    # Mapping from the incontiguous TACO category id to an id in [0, 16]
+    thing_dataset_id_to_contiguous_id = {k: i for i, k in enumerate(thing_ids)}
+    thing_classes = [k["name"] for k in TACO_CATEGORIES_HIGHSHOT]
+    ret = {
+        "thing_dataset_id_to_contiguous_id": thing_dataset_id_to_contiguous_id,
+        "thing_classes": thing_classes,
+        "thing_colors": thing_colors,
+    }
+    return ret
+
+
+def _get_coco_taco_metadata_hard():
+    thing_ids = [k["id"] for k in TACO_CATEGORIES_HARD]
+    thing_colors = [k["color"] for k in TACO_CATEGORIES_HARD]
+    assert len(thing_ids) == 3, len(thing_ids)
+    # Mapping from the incontiguous TACO category id to an id in [0, 3]
+    thing_dataset_id_to_contiguous_id = {k: i for i, k in enumerate(thing_ids)}
+    thing_classes = [k["name"] for k in TACO_CATEGORIES_HARD]
+    ret = {
+        "thing_dataset_id_to_contiguous_id": thing_dataset_id_to_contiguous_id,
+        "thing_classes": thing_classes,
+        "thing_colors": thing_colors,
+    }
+    return ret
+
+def _get_cigbutts_metadata():
+    thing_ids = [k["id"] for k in CIGBUTTS_CATEGORIES]
+    thing_colors = [k["color"] for k in CIGBUTTS_CATEGORIES]
+    assert len(thing_ids) == 1, len(thing_ids)
+    thing_dataset_id_to_contiguous_id = {k: i for i, k in enumerate(thing_ids)}
+    thing_classes = [k["name"] for k in CIGBUTTS_CATEGORIES]
+    ret = {
+        "thing_dataset_id_to_contiguous_id": thing_dataset_id_to_contiguous_id,
+        "thing_classes": thing_classes,
+        "thing_colors": thing_colors,
+    }
+    return ret
 
 def _get_builtin_metadata(dataset_name):
     if dataset_name == "coco":
         return _get_coco_instances_meta()
     elif dataset_name == "coco_fewshot":
         return _get_coco_fewshot_instances_meta()
-    elif dataset_name == "voc_fewshot":
-        return _get_voc_fewshot_instances_meta()
+    elif dataset_name == "lvis_v0.5":
+        return _get_lvis_instances_meta_v0_5()
+    elif dataset_name == "lvis_v0.5_fewshot":
+        return _get_lvis_fewshot_instances_meta_v0_5()
+    elif dataset_name == "pascal_voc_fewshot":
+        return _get_pascal_voc_fewshot_instances_meta()
+    elif dataset_name == "coco_taco":
+        return _get_coco_taco_metadata()
+    elif dataset_name == "coco_taco_fewshot":
+        return _get_coco_taco_metadata_fewshot()
+    elif dataset_name == "coco_taco_highshot":
+        return _get_coco_taco_metadata_highshot()
+    elif dataset_name == "coco_taco_hard":
+        return _get_coco_taco_metadata_hard()
+    elif dataset_name == "cigbutts":
+        return _get_cigbutts_metadata()
     raise KeyError("No built-in metadata for dataset {}".format(dataset_name))
+

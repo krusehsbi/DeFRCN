@@ -12,8 +12,8 @@ MODEL:
     ENABLE_DECOUPLE: True
     BACKWARD_SCALE: 0.75
 DATASETS:
-  TRAIN: ('coco_trainval_base',)
-  TEST: ('coco_test_base',)
+  TRAIN: ('coco_taco_train_base',)
+  TEST: ('coco_taco_val_base',)
 SOLVER:
   IMS_PER_BATCH: 16
   STEPS: (85000, 100000)

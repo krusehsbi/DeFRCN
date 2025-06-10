@@ -92,6 +92,10 @@ if __name__ == '__main__':
         TAR_SIZE = 80
     elif args.dataset == 'voc':
         TAR_SIZE = 20
+    elif args.dataset == 'coco_taco':
+        TAR_SIZE = 17
+    elif args.dataset == 'coco_taco_highshot':
+        TAR_SIZE = 16
     else:
         raise NotImplementedError
 

@@ -33,5 +33,5 @@ NPUT:
   MAX_SIZE_TEST: 1600
 TEST:
   PCB_ENABLE: True
-  PCB_MODELPATH: "/content/pretrained/.pretrain_weights/ImageNetPretrained/torchvision/resnet101-5d3b4d8f.pth"
+  PCB_MODELPATH: "/content/ImageNetPretrained/torchvision/resnet101-5d3b4d8f.pth"
 OUTPUT_DIR: "/content/drive/MyDrive/fsdet/checkpoints/coco_taco/DEFRCN/1shot_42"

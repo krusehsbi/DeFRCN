@@ -5,10 +5,10 @@ from collections import OrderedDict
 import torch
 import numpy as np
 from detectron2.data import MetadataCatalog
-from fsdet.evaluation.evaluator import DatasetEvaluator
+from defrcn.evaluation.evaluator import DatasetEvaluator
 from pycocotools.cocoeval import COCOeval
 from pycocotools.coco import COCO
-from fsdet.utils.file_io import PathManager
+from defrcn.utils.file_io import PathManager
 import os
 from detectron2.data.datasets.coco import convert_to_coco_json
 from detectron2.utils.logger import create_small_table

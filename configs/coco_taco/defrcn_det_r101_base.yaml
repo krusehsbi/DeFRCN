@@ -19,4 +19,4 @@ SOLVER:
   STEPS: (85000, 100000)
   MAX_ITER: 110000
   CHECKPOINT_PERIOD: 200000
-OUTPUT_DIR: "/content/drive/MyDrive/fsdet/checkpoints/coco_taco/DEFRCN/faster_rcnn_R_101_FPN_base"
+OUTPUT_DIR: "/content/drive/MyDrive/defrcn/checkpoints/coco_taco/DEFRCN/faster_rcnn_R_101_FPN_base"

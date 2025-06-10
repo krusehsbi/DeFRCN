@@ -1,6 +1,6 @@
 _BASE_: "../Base-RCNN.yaml"
 MODEL:
-  WEIGHTS: "/content/drive/MyDrive/fsdet/checkpoints/coco_taco/DEFRCN/faster_rcnn_R_101_FPN_base/model_reset_remove.pth"
+  WEIGHTS: "/content/drive/MyDrive/defrcn/checkpoints/coco_taco/DEFRCN/faster_rcnn_R_101_FPN_base/model_reset_remove.pth"
   MASK_ON: False
   BACKBONE:
     FREEZE: False
@@ -34,4 +34,4 @@ NPUT:
 TEST:
   PCB_ENABLE: True
   PCB_MODELPATH: "/content/ImageNetPretrained/torchvision/resnet101-5d3b4d8f.pth"
-OUTPUT_DIR: "/content/drive/MyDrive/fsdet/checkpoints/coco_taco/DEFRCN/1shot_42"
+OUTPUT_DIR: "/content/drive/MyDrive/defrcn/checkpoints/coco_taco/DEFRCN/1shot_42"

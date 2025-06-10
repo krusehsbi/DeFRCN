@@ -271,8 +271,8 @@ def register_all_coco_taco(root="datasets"):
     novel_classes = taco_metadata["novel_classes"]
 
     # BASE
-    cocotaco_train_base_json = "/content/fsdet/datasets/cocosplit/trainvalno5k.json"
-    cocotaco_train_base_images = "/content/fsdet/datasets/cocosplit/trainval2014"
+    cocotaco_train_base_json = "/content/defrcn/datasets/cocosplit/trainvalno5k.json"
+    cocotaco_train_base_images = "/content/defrcn/datasets/cocosplit/trainval2014"
 
     print(cocotaco_train_base_json)
 
@@ -284,8 +284,8 @@ def register_all_coco_taco(root="datasets"):
         metadata=_get_builtin_metadata("coco"),
     )
 
-    cocotaco_val_base_json = "/content/fsdet/datasets/cocosplit/5k.json"
-    cocotaco_val_base_images = "/content/fsdet/datasets/cocosplit/trainval2014"
+    cocotaco_val_base_json = "/content/defrcn/datasets/cocosplit/5k.json"
+    cocotaco_val_base_images = "/content/defrcn/datasets/cocosplit/trainval2014"
 
     register_coco_taco_dataset(
         name="coco_taco_val_base",
@@ -301,32 +301,32 @@ def register_all_coco_taco(root="datasets"):
     # 1shots
     register_coco_taco_dataset(
         name="taco_1shot_42_train",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/1shot/seed42/train.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/1shot/seed42/train.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_fewshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_1shot_42_val",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/1shot/seed42/val.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/1shot/seed42/val.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_fewshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_1shot_2025_train",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/1shot/seed2025/train.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/1shot/seed2025/train.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_fewshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_1shot_2025_val",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/1shot/seed2025/val.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/1shot/seed2025/val.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_fewshot"),
     )
@@ -334,32 +334,32 @@ def register_all_coco_taco(root="datasets"):
     # 5shots
     register_coco_taco_dataset(
         name="taco_5shot_42_train",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/5shot/seed42/train.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/5shot/seed42/train.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_fewshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_5shot_42_val",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/5shot/seed42/val.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/5shot/seed42/val.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_fewshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_5shot_2025_train",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/5shot/seed2025/train.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/5shot/seed2025/train.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_fewshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_5shot_2025_val",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/5shot/seed2025/val.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/5shot/seed2025/val.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_fewshot"),
     )
@@ -369,32 +369,32 @@ def register_all_coco_taco(root="datasets"):
 
     register_coco_taco_dataset(
         name="taco_10shot_42_train",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/10shot/seed42/train.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/10shot/seed42/train.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_highshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_10shot_42_val",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/10shot/seed42/val.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/10shot/seed42/val.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_highshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_10shot_2025_train",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/10shot/seed2025/train.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/10shot/seed2025/train.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_highshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_10shot_2025_val",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/10shot/seed2025/val.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/10shot/seed2025/val.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_highshot"),
     )
@@ -402,32 +402,32 @@ def register_all_coco_taco(root="datasets"):
     # 30shots
     register_coco_taco_dataset(
         name="taco_30shot_42_train",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/30shot/seed42/train.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/30shot/seed42/train.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_highshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_30shot_42_val",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/30shot/seed42/val.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/30shot/seed42/val.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_highshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_30shot_2025_train",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/30shot/seed2025/train.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/30shot/seed2025/train.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_highshot"),
     )
 
     register_coco_taco_dataset(
         name="taco_30shot_2025_val",
-        json_path="/content/fsdet/datasets/TACO/fewshot_splits/30shot/seed2025/val.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/fewshot_splits/30shot/seed2025/val.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_highshot"),
     )
@@ -436,16 +436,16 @@ def register_all_coco_taco(root="datasets"):
     metadata=_get_builtin_metadata("coco_taco_hard")
     register_coco_taco_dataset(
         name = "taco_30shot_42_hard_train",
-        json_path="/content/fsdet/datasets/TACO/hard_splits/30shot/seed42/train.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/hard_splits/30shot/seed42/train.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_hard"),
     )
 
     register_coco_taco_dataset(
         name = "taco_30shot_42_hard_val",
-        json_path="/content/fsdet/datasets/TACO/hard_splits/30shot/seed42/val.json",
-        image_root="/content/fsdet/datasets/TACO",
+        json_path="/content/defrcn/datasets/TACO/hard_splits/30shot/seed42/val.json",
+        image_root="/content/defrcn/datasets/TACO",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("coco_taco_hard"),
     )
@@ -454,16 +454,16 @@ def register_all_cigbutt():
     metadata = _get_builtin_metadata("cigbutts")
     register_cigbutt_dataset(
         name = "cigbutts_30shot_train",
-        json_path="/content/fsdet/datasets/cig_butts/train.json",
-        image_root="/content/fsdet/datasets/cig_butts/train/images",
+        json_path="/content/defrcn/datasets/cig_butts/train.json",
+        image_root="/content/defrcn/datasets/cig_butts/train/images",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("cigbutts"),
     )
 
     register_cigbutt_dataset(
         name = "cigbutts_30shot_val",
-        json_path="/content/fsdet/datasets/cig_butts/val.json",
-        image_root="/content/fsdet/datasets/cig_butts/train/images",
+        json_path="/content/defrcn/datasets/cig_butts/val.json",
+        image_root="/content/defrcn/datasets/cig_butts/train/images",
         thing_classes=metadata["thing_classes"],
         metadata=_get_builtin_metadata("cigbutts"),
     )

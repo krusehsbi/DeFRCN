@@ -23,8 +23,8 @@ class Trainer(DefaultTrainer):
             from defrcn.evaluation import PascalVOCDetectionEvaluator
             return PascalVOCDetectionEvaluator(dataset_name)
         if evaluator_type == "coco_taco":
-            from defrcn.evaluation import COCOEvaluator
-            return COCOEvaluator(dataset_name)
+            from defrcn.evaluation import CocoTacoEvaluator
+            return CocoTacoEvaluator(dataset_name)
         if len(evaluator_list) == 0:
             raise NotImplementedError(
                 "no Evaluator for the dataset {} with the type {}".format(

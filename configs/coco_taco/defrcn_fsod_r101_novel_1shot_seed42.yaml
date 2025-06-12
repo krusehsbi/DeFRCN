@@ -1,6 +1,6 @@
 _BASE_: "../Base-RCNN.yaml"
 MODEL:
-  WEIGHTS: "/content/drive/MyDrive/defrcn/checkpoints/coco_taco/DEFRCN/faster_rcnn_R_101_FPN_base/model_reset_remove.pth"
+  WEIGHTS: "/content/drive/MyDrive/defrcn/checkpoints/coco_taco/DEFRCN/faster_rcnn_R_101_FPN_all/model_reset_remove.pth"
   MASK_ON: False
   BACKBONE:
     FREEZE: False

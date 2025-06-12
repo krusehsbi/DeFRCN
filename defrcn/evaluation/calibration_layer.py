@@ -35,38 +35,36 @@ class PrototypicalCalibrationBlock:
             imagenet_model = resnet101()
         else:
             raise NotImplementedError
-        state_dict = torch.load(self.cfg.TEST.PCB_MODELPATH)
+        state_dict = torch.load(self.cfg.TEST.PCB_MODELPATH, weights_only=False, map_location='cpu')
         imagenet_model.load_state_dict(state_dict)
         imagenet_model = imagenet_model.to(self.device)
         imagenet_model.eval()
         return imagenet_model
 
     def build_prototypes(self):
-
         all_features, all_labels = [], []
-        for index in range(len(self.dataloader.dataset)):
-            inputs = [self.dataloader.dataset[index]]
-            assert len(inputs) == 1
-            # load support images and gt-boxes
-            img = cv2.imread(inputs[0]['file_name'])  # BGR
-            img_h, img_w = img.shape[0], img.shape[1]
-            ratio = img_h / inputs[0]['instances'].image_size[0]
-            inputs[0]['instances'].gt_boxes.tensor = inputs[0]['instances'].gt_boxes.tensor * ratio
-            boxes = [x["instances"].gt_boxes.to(self.device) for x in inputs]
+        with torch.no_grad():
+            for index in range(len(self.dataloader.dataset)):
+                inputs = [self.dataloader.dataset[index]]
+                img = cv2.imread(inputs[0]['file_name'])
+                img_h, img_w = img.shape[:2]
+                ratio = img_h / inputs[0]['instances'].image_size[0]
+                inputs[0]['instances'].gt_boxes.tensor *= ratio
+                boxes = [x["instances"].gt_boxes for x in inputs]  # keep on CPU
 
-            # extract roi features
-            features = self.extract_roi_features(img, boxes)
-            all_features.append(features.cpu().data)
+                # Extract features on CPU (change extract_roi_features accordingly)
+                features = self.extract_roi_features(img, boxes)
 
-            gt_classes = [x['instances'].gt_classes for x in inputs]
-            all_labels.append(gt_classes[0].cpu().data)
+                all_features.append(features.cpu())
+                gt_classes = [x['instances'].gt_classes for x in inputs]
+                all_labels.append(gt_classes[0].cpu())
 
-        # concat
+                torch.cuda.empty_cache()
+
         all_features = torch.cat(all_features, dim=0)
         all_labels = torch.cat(all_labels, dim=0)
-        assert all_features.shape[0] == all_labels.shape[0]
 
-        # calculate prototype
+        # build prototypes (same as before)
         features_dict = {}
         for i, label in enumerate(all_labels):
             label = int(label)
@@ -81,27 +79,29 @@ class PrototypicalCalibrationBlock:
 
         return prototypes_dict
 
+
+
     def extract_roi_features(self, img, boxes):
-        """
-        :param img:
-        :param boxes:
-        :return:
-        """
+        mean = torch.tensor([0.406, 0.456, 0.485], device=self.device).view(3, 1, 1)
+        std = torch.tensor([0.225, 0.224, 0.229], device=self.device).view(3, 1, 1)
 
-        mean = torch.tensor([0.406, 0.456, 0.485]).reshape((3, 1, 1)).to(self.device)
-        std = torch.tensor([[0.225, 0.224, 0.229]]).reshape((3, 1, 1)).to(self.device)
+        img = img[:, :, ::-1]  # BGR to RGB
+        img = img.transpose((2, 0, 1)).copy()
+        img = torch.from_numpy(img).float().to(self.device)
 
-        img = img.transpose((2, 0, 1))
-        img = torch.from_numpy(img).to(self.device)
-        images = [(img / 255. - mean) / std]
+        img = (img / 255.0 - mean) / std
+        images = [img]
         images = ImageList.from_tensors(images, 0)
-        conv_feature = self.imagenet_model(images.tensor[:, [2, 1, 0]])[1]  # size: BxCxHxW
 
-        box_features = self.roi_pooler([conv_feature], boxes).squeeze(2).squeeze(2)
+        conv_feature = self.imagenet_model(images.tensor)[1]
+
+        boxes_gpu = [b.to(self.device) for b in boxes]
+        box_features = self.roi_pooler([conv_feature], boxes_gpu).squeeze(-1).squeeze(-1)
 
         activation_vectors = self.imagenet_model.fc(box_features)
-
         return activation_vectors
+
+
 
     def execute_calibration(self, inputs, dts):
 

@@ -35,7 +35,7 @@ class PrototypicalCalibrationBlock:
             imagenet_model = resnet101()
         else:
             raise NotImplementedError
-        state_dict = torch.load(self.cfg.TEST.PCB_MODELPATH)
+        state_dict = torch.load(self.cfg.TEST.PCB_MODELPATH, weights_only=False)
         imagenet_model.load_state_dict(state_dict)
         imagenet_model = imagenet_model.to(self.device)
         imagenet_model.eval()

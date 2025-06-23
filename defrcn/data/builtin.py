@@ -449,6 +449,24 @@ def register_all_coco_taco(root="datasets"):
         metadata=_get_builtin_metadata("coco_taco_hard"),
     )
 
+    # 10shot own images
+    metadata = _get_builtin_metadata("coco_taco_highshot")
+
+    register_coco_taco_dataset(
+        name="taco_10shot_own_train",
+        json_path="/content/defrcn/datasets/trashimages/train.json",
+        image_root="/content/defrcn/datasets/trashimages/train",
+        thing_classes=metadata["thing_classes"],
+        metadata=_get_builtin_metadata("coco_taco_highshot"),
+    )
+
+    register_coco_taco_dataset(
+        name="taco_10shot_own_val",
+        json_path="/content/defrcn/datasets/trashimages/test.json",
+        image_root="/content/defrcn/datasets/trashimages/test",
+        thing_classes=metadata["thing_classes"],
+        metadata=_get_builtin_metadata("coco_taco_highshot"),
+    )
 
 # Register them all under "./datasets"
 register_all_coco()
